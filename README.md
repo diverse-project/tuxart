@@ -1,12 +1,9 @@
-
-
-
-# WELCOME TO TUXART
+# Welcome to TuxArt 
 
 The first question you might ask if you are not familiar with Linux is what is Tux ?
 Well basically [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) (link to the wiki) is a penguin and the official mascot of the Linux kernel.
 
-## CONTEXT
+## Context
 The Linux kernel contains over 15000 configuration options, most of them take 3 different value (yes, no or module).
 So theorically there are 3^15000 possible configuration files of the Linux kernel.
 The **goal** of tuxart is to create as many different Tuxes as possible configuration files.
@@ -22,17 +19,18 @@ The script will fetch in the default folders /boot and /proc for a configuration
 An arbitrary kernel configuration file can be passed as argument, output file will be stored in ~/Pictures/CustomTux
 
 
-## DOWNLOAD AND INSTALL INSTRUCTIONS:
+## Downaload and Install Insructions
 
 - From terminal type
 	- `wget "https://github.com/HommeOursPorc/tuxart/releases/download/3.2/tuxart-3.2.tar.gz"`
 	- `pip3 install tuxart-3.2.tar.gz --user --install-option="--install-scripts=~/.local/bin"`
+(note: you can use `pip3 install . --user --install-option="--install-scripts=~/.local/bin"` if you want to update tuxart from the sources/git assuming that '.' refers to the directory of the sources)
 - Then add `~/.local/bin` to your command line with
 	- `export PATH=$PATH:~/.local/bin`
 
 
 
-### RUN TUXART
+### Running TuxArt
 
 - From terminal type
 	- `tuxart`
@@ -44,7 +42,7 @@ If you want to pass your custom configuration file:
 Type `tuxart -h` or `tuxart --help` for help from terminal
 
 
-## OPTIONS:
+## Options
 
 Various options are available if you already have a linux kernel.*
 
@@ -62,7 +60,7 @@ You can either :
  ![Blue tux](tuxart/examples/bluetux.svg)
 
 
-### RUN OPTIONS
+### Running options 
 
    - From terminal type :
 	   - `tuxart --grid [path to kernel folder] [number of tux, default = 4]`
@@ -83,6 +81,6 @@ While working with randomly generated kernels, a visual feedback can increase th
 
 Visual feedback can be improved by increasing choice between custom accessories. This kind of benefits can be achieved by adding more accessories and by fully respecting dependencies between related configurations.
 
-#### KNOWN ISSUES
+#### Known Issues
 - Loading bar get overwritten in --grid and --gif options
 - Misconfiguration of the installation folder when .tar is download from pypi
