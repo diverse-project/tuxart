@@ -8,7 +8,7 @@ contents = ""
 n="is not set"
 
 
-#Returns the number of configurations in the .config file
+#Returns the number of options in the .config file
 def nbconfig():
     global globalcontainer
     count=0
@@ -17,7 +17,7 @@ def nbconfig():
 
     return count
 
-#Retrieving configuration list from "contents" variable and ordering them by menu names as keys and corresponding list of configurations as values
+#Retrieving options list from "contents" variable and ordering them by menu names as keys and corresponding list of options as values
 def filldic(filename = ".config"):
     global globalcontainer
     global contents
@@ -33,15 +33,15 @@ def filldic(filename = ".config"):
         globalcontainer[cat[1]]=[]
         for line in range(3,len(cat)):
             globalcontainer[cat[1]].append(cat[line])
-    print("Dictionnary has been succesfully updated and now has %d configurations...\n" % nbconfig())
+    print("Dictionnary has been succesfully updated and now has %d options...\n" % nbconfig())
 
-#Checks if the argument configuration is currently active in this .config file while in a loop  or handling single configurations
+#Checks if the argument option is currently active in this .config file while in a loop  or handling single configurations
 def isconfigactive(configname):
     if configname[:1] == '#':
         return False
     return True
 
-#Same behaviour as previous method, but can be used for checking configuration value if not inside a loop
+#Same behaviour as previous method, but can be used for checking option value if not inside a loop
 def isconfigenabled(configname):
     global globalcontainer
     for key, values in globalcontainer.items():
@@ -51,7 +51,7 @@ def isconfigenabled(configname):
     return False
 
 
-#Returns number of configuration set to symbol for a given configuration menu
+#Returns number of options set to symbol for a given configuration menu
 #Symbol values must be either 'y' or 'm'
 def countconfig(symbol, configmenu):
     global globalcontainer
