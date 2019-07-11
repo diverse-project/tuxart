@@ -1,16 +1,12 @@
 # Welcome to TuxArt 
 
-The first question you might ask if you are not familiar with Linux is what is Tux?
-Well basically [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) (link to the wiki) is a penguin and the official mascot of the Linux kernel.
-
-## Context
-The Linux kernel contains over 15000 configuration options, most of them take 3 different value (yes, no or module).
-So theorically there are 3^15000 possible configuration files of the Linux kernel.
-The **goal** of tuxart is to create as many different Tuxes as possible configuration files.
-
-
+The **goal** of TuxArt is to create as many different [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) as possible configuration files of the Linux kernel.
 ![tux grid](tuxart/examples/TuxFamily.png)
 
+## Context
+The first question you might ask if you are not familiar with Linux is what is Tux?
+Well basically [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) (link to the wiki) is a penguin and the official mascot of the Linux kernel. The Linux kernel contains over 15000 configuration options, most of them take 3 different value (yes, no or module).
+So theorically there are 3^15000 possible configuration files of the Linux kernel.
 
 This program will fetch for your running Kernel's configuration file and then generate an unique Tux based on the current active configurations on your kernel.
 
@@ -85,4 +81,4 @@ Visual feedback can be improved by increasing choice between custom accessories.
 - Loading bar get overwritten in --grid and --gif options
 - Misconfiguration of the installation folder when .tar is download from pypi
 
-![tux gallery](https://gist.github.com/FAMILIAR-project/2d6588ad2711be43decdc2a9128d6c45/raw/075581630f4cd37923dae6408c30e06556383645/TuxFamil100.png)
+Want to see 100 variants of the Tux family? https://gist.github.com/FAMILIAR-project/2d6588ad2711be43decdc2a9128d6c45
