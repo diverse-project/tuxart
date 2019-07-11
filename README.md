@@ -1,6 +1,6 @@
 # Welcome to TuxArt 
 
-The first question you might ask if you are not familiar with Linux is what is Tux ?
+The first question you might ask if you are not familiar with Linux is what is Tux?
 Well basically [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) (link to the wiki) is a penguin and the official mascot of the Linux kernel.
 
 ## Context
@@ -84,3 +84,5 @@ Visual feedback can be improved by increasing choice between custom accessories.
 #### Known Issues
 - Loading bar get overwritten in --grid and --gif options
 - Misconfiguration of the installation folder when .tar is download from pypi
+
+![tux gallery](https://gist.github.com/FAMILIAR-project/2d6588ad2711be43decdc2a9128d6c45/raw/075581630f4cd37923dae6408c30e06556383645/TuxFamil100.png)
