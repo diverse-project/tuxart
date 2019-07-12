@@ -41,7 +41,10 @@ Type `tuxart -h` or `tuxart --help` for help from terminal
 
 ### Docker and TuxArt
 
-You can build the image with the Docker file or simply reuse a custom and ready-to-use image: 
+You can build the image with the Docker file:
+`docker build . -t macher/tuxart:latest` (in `docker` folder)
+
+or simply reuse a custom and ready-to-use image: 
 `docker run --rm macher/tuxart tuxart --grid linux-4.13.3`
 
 ## Options
