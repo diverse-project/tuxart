@@ -7,6 +7,8 @@ NBTUX=4
 progressi=0
 tmp2=0
 
+TUX_IMGFOLDER="tuxmloutput/"
+
 # delay executing script
 delay()
 {
@@ -145,11 +147,11 @@ then
   if [ -d $2 ]
   then
     # Creating folder container for random tuxes
-    mkdir -p ~/Pictures/TuxGallery
+    mkdir -p $TUX_IMGFOLDER #~/Pictures/TuxGallery
     progress 10 "Creating TuxGallery folder..."
 
     # Cleaning folder if it's not empty
-    if [ "$(ls -A ~/Pictures/TuxGallery/)" ]; then rm ~/Pictures/TuxGallery/*; fi
+    if [ "$(ls -A $TUX_IMGFOLDER)" ]; then rm -rf $TUX_IMGFOLDER; fi
 
     # Checking if number of tux to produce has been specified
     if [ -z $3 ]
@@ -187,10 +189,10 @@ then
       #Incrementing progres bar
       tmp=`echo "tmp=$tmp+$progressi;tmp" | bc`
       progress $tmp "randomTux n$i is getting assembled..."
-      mv $2/.config ~/Pictures/TuxGallery/.config$i
+      mv $2/.config "${TUX_IMGFOLDER}.config{i}"
 
       # Calling main function! Tux generator is on!
-      python3 ~/.local/lib/python3.7/site-packages/sources/main.py ~/Pictures/TuxGallery/.config$i
+      python3 ~/.local/lib/python3.7/site-packages/sources/main.py "${TUX_IMGFOLDER}.config{i}" #~/Pictures/TuxGallery/.config$i
       if [ $? -ne 0 ]
       then
         echo -e "\nFailed to create randomTux..."
@@ -198,8 +200,9 @@ then
       fi
 
       # Placing a copy of the Tux in TuxGallery folder in both format .png and .svg
-      mv ~/Pictures/tux_mod.svg  ~/Pictures/TuxGallery/tux_mod$i.svg
-      cairosvg ~/Pictures/TuxGallery/tux_mod$i.svg -o ~/Pictures/TuxGallery/tux_mod$i.png
+      mv ~/Pictures/tux_mod.svg  "${TUX_IMGFOLDER}tux_mod{i}.svg"
+      # cairosvg ~/Pictures/TuxGallery/tux_mod$i.svg -o ~/Pictures/TuxGallery/tux_mod$i.png
+      cairosvg "${TUX_IMGFOLDER}tux_mod{i}.svg" -o "${TUX_IMGFOLDER}tux_mod{i}.png" 
       tmp=`echo "tmp=$tmp+$progressi;tmp" | bc`
       progress $tmp "randomTux n$i is ready!"
 
@@ -208,10 +211,10 @@ then
     # Creating grid of tuxes
     progress 90 "Generating .png grid..."
     montage -density 300 -geometry +5+50 -border 5 ~/Pictures/TuxGallery/tux_mod*.png ~/Pictures/TuxGallery/TuxFamily.png
-    progress 99 "TuxFamily.png is here! Check it in ~/Pictures/TuxGallery"
+    progress 99 "TuxFamily.png is here! Check it in $TUX_IMGFOLDER"
 
     # Displaying image for 10 seconds
-    timeout 10 display ~/Pictures/TuxGallery/TuxFamily.png &
+    timeout 10 display "${TUX_IMGFOLDER}TuxFamily.png" &
     progress 100
 
 
