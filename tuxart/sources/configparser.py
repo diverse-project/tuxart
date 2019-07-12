@@ -8,6 +8,7 @@ contents = ""
 n="is not set"
 
 
+
 #Returns the number of options in the .config file
 def nbconfig():
     global globalcontainer
@@ -16,6 +17,7 @@ def nbconfig():
         count += len(values)
 
     return count
+
 
 #Retrieving options list from "contents" variable and ordering them by menu names as keys and corresponding list of options as values
 def filldic(filename = ".config"):
@@ -49,6 +51,7 @@ def isconfigenabled(configname):
             if configname == item[:-2] and (item[-1:] == 'y' or item[-1:] == 'm'):
                 return True
     return False
+
 
 
 #Returns number of options set to symbol for a given configuration menu

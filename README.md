@@ -21,6 +21,7 @@ An arbitrary kernel configuration file can be passed as argument, output file wi
 	- `wget "https://github.com/HommeOursPorc/tuxart/releases/download/3.2.1/tuxart-3.2.1.tar.gz"`
 	- `pip3 install tuxart-3.2.1.tar.gz --user --install-option="--install-scripts=~/.local/bin"`
 (note: you can use `pip3 install . --user --install-option="--install-scripts=~/.local/bin"` if you want to update tuxart from the sources/git assuming that '.' refers to the directory of the sources)
+
 - Then add `~/.local/bin` to your command line with
 	- `export PATH=$PATH:~/.local/bin`
 
@@ -41,7 +42,6 @@ Type `tuxart -h` or `tuxart --help` for help from terminal
 
 You can build the image with the Docker file or simply reuse a custom and ready-to-use image: 
 `docker run --rm macher/tuxart tuxart --grid linux-4.13.3`
-
 
 ## Options
 
