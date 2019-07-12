@@ -8,3 +8,5 @@ RUN apk add --no-cache bash
 RUN pip3 install tuxart-3.2.1.tar.gz --user --install-option="--install-scripts=/usr/local/bin/"
 RUN wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.13.3.tar.xz 
 RUN tar -xJf linux-4.13.3.tar.xz
+RUN apk add --no-cache imagemagick
+RUN apk add freetype freetype-dev 
