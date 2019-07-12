@@ -1,7 +1,7 @@
 # Welcome to TuxArt 
 
 The **goal** of TuxArt is to create as many different [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) as possible configuration files of the Linux kernel. 
-We are developping a Python-based generator that can produces the Tux of your machine, a family of Tux (as a gif or grid), or a custom Tux. You can even use a Docker image to play with TuxArt!
+We are developping a Python-based generator that can produces the Tux of your machine, a family of Tux (as a gif or grid), or a custom Tux. You can even use a Docker image to play with TuxArt! You're warmly welcomed to participate: we are seeking ideas, creations, artists, coders to help improving the Tux generator.  
 ![tux grid](tuxart/examples/TuxFamily.png)
 
 ## Context
