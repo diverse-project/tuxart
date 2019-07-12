@@ -37,6 +37,11 @@ If you want to pass your custom configuration file:
 
 Type `tuxart -h` or `tuxart --help` for help from terminal
 
+### Docker and TuxArt
+
+You can build the image with the Docker file or simply reuse a custom and ready-to-use image: 
+`docker run --rm macher/tuxart tuxart --grid linux-4.13.3`
+
 
 ## Options
 
