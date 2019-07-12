@@ -1,6 +1,7 @@
 # Welcome to TuxArt 
 
-The **goal** of TuxArt is to create as many different [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) as possible configuration files of the Linux kernel.
+The **goal** of TuxArt is to create as many different [Tux](https://en.wikipedia.org/wiki/Tux_(mascot)) as possible configuration files of the Linux kernel. 
+We are developping a Python-based generator that can produces the Tux of your machine, a family of Tux (as a gif or grid), or a custom Tux. You can even use a Docker image to play with TuxArt!
 ![tux grid](tuxart/examples/TuxFamily.png)
 
 ## Context
@@ -15,7 +16,7 @@ The script will fetch in the default folders /boot and /proc for a configuration
 An arbitrary kernel configuration file can be passed as argument, output file will be stored in ~/Pictures/CustomTux
 
 
-## Downaload and Install Insructions
+## Download and Install Insructions
 
 - From terminal type
 	- `wget "https://github.com/HommeOursPorc/tuxart/releases/download/3.2.1/tuxart-3.2.1.tar.gz"`
