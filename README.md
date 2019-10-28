@@ -90,4 +90,14 @@ Visual feedback can be improved by increasing choice between custom accessories.
 - Loading bar get overwritten in --grid and --gif options
 - Misconfiguration of the installation folder when .tar is download from pypi
 
+### Contributors
+
+The project has started at University of Rennes 1 (ISTIC)
+ * Khaled Arsalane
+ * Eliot Marie 
+ * Pierre Pouteau
+ * Mathieu Acher (supervisor) 
+ * Zakariae Boukhchen 
+ * Richard Faraji-Huon  
+
 Want to see 100 variants of the Tux family? https://gist.github.com/FAMILIAR-project/2d6588ad2711be43decdc2a9128d6c45
